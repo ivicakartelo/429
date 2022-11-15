@@ -13,11 +13,9 @@ import { postAdded } from './postsSlice'
 
   const users = useSelector(state => state.users)
 
-  function onTitleChanged(e) { setTitle(e.target.value) } 
+  const onTitleChanged = e => setTitle(e.target.value) 
   const onContentChanged = e => setContent(e.target.value)
   const onAuthorChanged = e => setUserId(e.target.value)
-
-  console.log(onTitleChanged)
 
   const onSavePostClicked = () => {
     if (title && content) {
